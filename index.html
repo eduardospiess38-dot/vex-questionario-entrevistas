@@ -34,7 +34,7 @@
       <div class="hero-copy reveal-up">
         <p class="eyebrow">Entrevista individual · uso real do sistema</p>
         <h1 id="hero-title">Entrevista de uso do sistema.</h1>
-        <p class="hero-text">Prévia navegável para validação do contratante. As respostas desta versão ficam apenas no navegador usado para o teste.</p>
+        <p class="hero-text">Registre a rotina, as dificuldades e as melhorias sugeridas por cada colaborador, mantendo a visualização em dashboard anônimo.</p>
       </div>
     </section>
 
@@ -57,13 +57,13 @@
           <legend>1. Identificação</legend>
           <div class="field-grid two">
             <label>Nome da pessoa entrevistada <span aria-hidden="true">*</span>
-              <input name="respondentName" autocomplete="name" required placeholder="Ex.: Ana Souza" />
+              <input name="respondentName" autocomplete="name" required placeholder="Nome completo" />
             </label>
             <label>Setor / área <span aria-hidden="true">*</span>
-              <input name="department" required placeholder="Ex.: Atendimento, financeiro, operações" />
+              <input name="department" required placeholder="Setor ou área de atuação" />
             </label>
             <label>Cargo / função <span aria-hidden="true">*</span>
-              <input name="role" required placeholder="Ex.: Analista, assistente, gestor" />
+              <input name="role" required placeholder="Cargo ou função" />
             </label>
             <label>Data da entrevista
               <input name="interviewDate" type="date" />
@@ -88,7 +88,7 @@
         <fieldset class="step" data-step="2">
           <legend>2. Rotina de uso</legend>
           <label>Com que frequência você usa o sistema? <span aria-hidden="true">*</span>
-            <textarea name="usageFrequency" required placeholder="Ex.: todos os dias, algumas vezes por semana, só em fechamento..."></textarea>
+            <textarea name="usageFrequency" required placeholder="Descreva a frequência de uso"></textarea>
           </label>
           <label>Em quais momentos do dia ou da semana você costuma usar o sistema?
             <textarea name="usageMoments"></textarea>
@@ -193,22 +193,22 @@
           <legend>8. Detalhes para melhoria do sistema</legend>
           <p class="step-help">Essas respostas ajudam a transformar a entrevista em backlog, telas, regras e critérios de aceite.</p>
           <label>Quando essa tarefa ou melhoria termina, o que precisa estar pronto?
-            <textarea name="expectedOutcome" placeholder="Ex.: relatório gerado, cadastro finalizado, informação conferida, solicitação enviada..."></textarea>
+            <textarea name="expectedOutcome" placeholder="Descreva o resultado esperado ao concluir a tarefa"></textarea>
           </label>
           <label>Quais informações a pessoa precisa preencher, consultar ou conferir nessa tarefa?
             <textarea name="dataInputsOutputs" placeholder="Liste campos, dados de entrada, informações consultadas e saídas esperadas."></textarea>
           </label>
           <label>Existe alguma regra, exceção ou cuidado importante nessa tarefa?
-            <textarea name="businessRules" placeholder="Ex.: só pode alterar antes do fechamento, precisa validar status, depende de aprovação..."></textarea>
+            <textarea name="businessRules" placeholder="Descreva regras, validações, exceções ou aprovações importantes"></textarea>
           </label>
           <label>Quem pode fazer essa ação no sistema?
-            <textarea name="permissions" placeholder="Ex.: todos, somente financeiro, gestor, administrador, usuário responsável..."></textarea>
+            <textarea name="permissions" placeholder="Informe perfis, áreas ou responsáveis autorizados"></textarea>
           </label>
           <label>Essa tarefa precisa se conectar com outro sistema, planilha, e-mail, WhatsApp ou API?
             <textarea name="integrationsNeeded"></textarea>
           </label>
           <label>Como saberemos que a melhoria ficou boa?
-            <textarea name="successCriteria" placeholder="Ex.: menos cliques, menos retrabalho, relatório sai em segundos, usuário não precisa usar planilha..."></textarea>
+            <textarea name="successCriteria" placeholder="Descreva sinais objetivos de melhoria percebida"></textarea>
           </label>
         </fieldset>
 

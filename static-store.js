@@ -1,4 +1,4 @@
-const STORE_KEY = 'vex_interview_demo_responses_v1';
+const STORE_KEY = 'vex_interview_responses_v1';
 
 const importantFields = ['respondentName', 'department', 'role', 'systemName', 'usageFrequency', 'mainTasks', 'workflowSteps', 'confusingParts', 'firstChange'];
 const fieldLabels = {
@@ -125,7 +125,7 @@ function exportAggregateCsv() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'dashboard-entrevistas-vex-demo-anonimo.csv';
+  a.download = 'dashboard-entrevistas-vex-anonimo.csv';
   document.body.appendChild(a);
   a.click();
   a.remove();
