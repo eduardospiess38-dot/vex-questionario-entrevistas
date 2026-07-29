@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#030305" />
+  <title>VEX — Entrevista Individual de Uso do Sistema</title>
+  <meta name="description" content="Questionário online acessível para entrevistas individuais sobre uso de sistemas, dificuldades e melhorias." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#formulario">Pular para o formulário</a>
+  <div class="ambient" aria-hidden="true">
+    <div class="grid-light"></div>
+  </div>
+
+  <header class="topbar" role="banner">
+    <a class="brand" href="#inicio" aria-label="VEX, início">
+      <img class="brand-logo" src="assets/vex-logo.svg" alt="VEX" />
+      <span><small>Questionário institucional</small></span>
+    </a>
+    <nav class="top-actions" aria-label="Controles de acessibilidade">
+      <button class="pill-button" type="button" data-toggle-contrast aria-pressed="false">Alto contraste</button>
+      <button class="pill-button" type="button" data-toggle-motion aria-pressed="false">Reduzir animações</button>
+      <a class="pill-button link" href="admin.html">Ver dashboard</a>
+    </nav>
+  </header>
+
+  <main id="inicio" class="site-shell">
+    <section class="hero lean" aria-labelledby="hero-title">
+      <div class="hero-copy reveal-up">
+        <p class="eyebrow">Entrevista individual · uso real do sistema</p>
+        <h1 id="hero-title">Entrevista de uso do sistema.</h1>
+        <p class="hero-text">Prévia navegável para validação do contratante. As respostas desta versão ficam apenas no navegador usado para o teste.</p>
+      </div>
+    </section>
+
+    <section id="formulario" class="form-section" aria-labelledby="form-title">
+      <div class="form-heading reveal-up">
+        <h2 id="form-title">Roteiro de entrevista individual</h2>
+        <p>Preencha durante a conversa. Use frases simples e anote exemplos reais quando aparecerem.</p>
+      </div>
+
+      <div class="progress-wrap" aria-label="Progresso do formulário">
+        <div class="progress-meta"><span id="stepLabel">Etapa 1 de 9</span><span id="progressPercent">11%</span></div>
+        <div class="progress-track"><span id="progressBar"></span></div>
+      </div>
+
+      <div id="liveStatus" class="sr-only" aria-live="polite"></div>
+      <div id="formAlert" class="form-alert" role="alert" hidden></div>
+
+      <form id="interviewForm" class="glass-form" novalidate>
+        <fieldset class="step active" data-step="1">
+          <legend>1. Identificação</legend>
+          <div class="field-grid two">
+            <label>Nome da pessoa entrevistada <span aria-hidden="true">*</span>
+              <input name="respondentName" autocomplete="name" required placeholder="Ex.: Ana Souza" />
+            </label>
+            <label>Setor / área <span aria-hidden="true">*</span>
+              <input name="department" required placeholder="Ex.: Atendimento, financeiro, operações" />
+            </label>
+            <label>Cargo / função <span aria-hidden="true">*</span>
+              <input name="role" required placeholder="Ex.: Analista, assistente, gestor" />
+            </label>
+            <label>Data da entrevista
+              <input name="interviewDate" type="date" />
+            </label>
+            <label class="span-2">Sistema ou aplicação avaliada <span aria-hidden="true">*</span>
+              <input name="systemName" required placeholder="Nome do sistema usado no escritório" />
+            </label>
+          </div>
+          <div class="assistive-box">
+            <strong>Necessidades de acessibilidade da entrevista</strong>
+            <div class="check-grid" role="group" aria-label="Necessidades de acessibilidade">
+              <label><input type="checkbox" name="accessibilityNeeds" value="Leitor de tela" /> Leitor de tela</label>
+              <label><input type="checkbox" name="accessibilityNeeds" value="Alto contraste" /> Alto contraste</label>
+              <label><input type="checkbox" name="accessibilityNeeds" value="Fonte maior" /> Fonte maior</label>
+              <label><input type="checkbox" name="accessibilityNeeds" value="Navegação por teclado" /> Navegação por teclado</label>
+              <label><input type="checkbox" name="accessibilityNeeds" value="Explicação oral" /> Explicação oral</label>
+              <label><input type="checkbox" name="accessibilityNeeds" value="Mais tempo para responder" /> Mais tempo para responder</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="step" data-step="2">
+          <legend>2. Rotina de uso</legend>
+          <label>Com que frequência você usa o sistema? <span aria-hidden="true">*</span>
+            <textarea name="usageFrequency" required placeholder="Ex.: todos os dias, algumas vezes por semana, só em fechamento..."></textarea>
+          </label>
+          <label>Em quais momentos do dia ou da semana você costuma usar o sistema?
+            <textarea name="usageMoments"></textarea>
+          </label>
+          <label>Quais são as principais tarefas que você faz no sistema? <span aria-hidden="true">*</span>
+            <textarea name="mainTasks" required></textarea>
+          </label>
+          <label>Das tarefas acima, quais são as mais importantes para o seu trabalho?
+            <textarea name="importantTasks"></textarea>
+          </label>
+        </fieldset>
+
+        <fieldset class="step" data-step="3">
+          <legend>3. Passo a passo do trabalho</legend>
+          <label>Escolha uma tarefa importante e descreva como você faz hoje, passo a passo. <span aria-hidden="true">*</span>
+            <textarea name="workflowSteps" required placeholder="1. Abro a tela...&#10;2. Procuro o cliente...&#10;3. Confiro..."></textarea>
+          </label>
+          <label>Existe alguma parte desse processo que você precisa repetir muitas vezes?
+            <textarea name="repetitiveParts"></textarea>
+          </label>
+          <label>Existe alguma parte que depende de outra pessoa, planilha, mensagem ou controle fora do sistema?
+            <textarea name="externalDependencies"></textarea>
+          </label>
+        </fieldset>
+
+        <fieldset class="step" data-step="4">
+          <legend>4. O que funciona bem</legend>
+          <label>O que você acha fácil de usar no sistema?
+            <textarea name="easyParts"></textarea>
+          </label>
+          <label>Existe alguma tela, botão, função ou relatório que ajuda bastante no seu trabalho?
+            <textarea name="helpfulFeatures"></textarea>
+          </label>
+          <label>O que você não gostaria que mudasse?
+            <textarea name="keepUnchanged"></textarea>
+          </label>
+        </fieldset>
+
+        <fieldset class="step" data-step="5">
+          <legend>5. Dificuldades e pontos de atrito</legend>
+          <label>O que você acha confuso, demorado ou difícil no sistema? <span aria-hidden="true">*</span>
+            <textarea name="confusingParts" required></textarea>
+          </label>
+          <label>Existe alguma tela ou etapa em que você costuma ter dúvida?
+            <textarea name="doubtPoints"></textarea>
+          </label>
+          <label>O sistema apresenta erro, lentidão ou comportamento inesperado em algum momento?
+            <textarea name="errorsOrSlowness"></textarea>
+          </label>
+          <label>Quando algo dá errado, como você resolve hoje?
+            <textarea name="workaround"></textarea>
+          </label>
+        </fieldset>
+
+        <fieldset class="step" data-step="6">
+          <legend>6. Informações e melhorias</legend>
+          <label>Existe alguma informação que você precisa, mas não encontra facilmente no sistema?
+            <textarea name="missingInfo"></textarea>
+          </label>
+          <label>Existe algum relatório, filtro, aviso ou campo que faria falta se não existisse?
+            <textarea name="essentialReports"></textarea>
+          </label>
+          <label>Existe algum relatório, filtro, aviso ou campo que você gostaria que existisse?
+            <textarea name="desiredReports"></textarea>
+          </label>
+          <label>Se você pudesse mudar uma coisa no sistema, o que mudaria primeiro? <span aria-hidden="true">*</span>
+            <textarea name="firstChange" required></textarea>
+          </label>
+        </fieldset>
+
+        <fieldset class="step" data-step="7">
+          <legend>7. Priorização</legend>
+          <label>Que melhoria economizaria mais tempo no seu trabalho?
+            <textarea name="timeSavingImprovement"></textarea>
+          </label>
+          <label>Que melhoria evitaria erros ou retrabalho?
+            <textarea name="reworkReduction"></textarea>
+          </label>
+          <label>Tem alguma ideia simples que poderia melhorar o uso do sistema?
+            <textarea name="simpleIdea"></textarea>
+          </label>
+          <div class="assistive-box">
+            <strong>Na sua opinião, o que é mais urgente?</strong>
+            <div class="check-grid" role="group" aria-label="Prioridades urgentes">
+              <label><input type="checkbox" name="urgentPriorities" value="Melhorar velocidade" /> Melhorar velocidade</label>
+              <label><input type="checkbox" name="urgentPriorities" value="Simplificar telas" /> Simplificar telas</label>
+              <label><input type="checkbox" name="urgentPriorities" value="Reduzir etapas repetitivas" /> Reduzir etapas repetitivas</label>
+              <label><input type="checkbox" name="urgentPriorities" value="Corrigir erros" /> Corrigir erros</label>
+              <label><input type="checkbox" name="urgentPriorities" value="Criar relatórios ou filtros" /> Criar relatórios ou filtros</label>
+              <label><input type="checkbox" name="urgentPriorities" value="Melhorar busca de informações" /> Melhorar busca de informações</label>
+            </div>
+            <label>Outro ponto urgente
+              <input name="urgentPriorityOther" placeholder="Descreva se houver outro ponto" />
+            </label>
+          </div>
+          <label>Explique por que esse ponto é importante.
+            <textarea name="priorityReason"></textarea>
+          </label>
+        </fieldset>
+
+        <fieldset class="step" data-step="8">
+          <legend>8. Detalhes para melhoria do sistema</legend>
+          <p class="step-help">Essas respostas ajudam a transformar a entrevista em backlog, telas, regras e critérios de aceite.</p>
+          <label>Quando essa tarefa ou melhoria termina, o que precisa estar pronto?
+            <textarea name="expectedOutcome" placeholder="Ex.: relatório gerado, cadastro finalizado, informação conferida, solicitação enviada..."></textarea>
+          </label>
+          <label>Quais informações a pessoa precisa preencher, consultar ou conferir nessa tarefa?
+            <textarea name="dataInputsOutputs" placeholder="Liste campos, dados de entrada, informações consultadas e saídas esperadas."></textarea>
+          </label>
+          <label>Existe alguma regra, exceção ou cuidado importante nessa tarefa?
+            <textarea name="businessRules" placeholder="Ex.: só pode alterar antes do fechamento, precisa validar status, depende de aprovação..."></textarea>
+          </label>
+          <label>Quem pode fazer essa ação no sistema?
+            <textarea name="permissions" placeholder="Ex.: todos, somente financeiro, gestor, administrador, usuário responsável..."></textarea>
+          </label>
+          <label>Essa tarefa precisa se conectar com outro sistema, planilha, e-mail, WhatsApp ou API?
+            <textarea name="integrationsNeeded"></textarea>
+          </label>
+          <label>Como saberemos que a melhoria ficou boa?
+            <textarea name="successCriteria" placeholder="Ex.: menos cliques, menos retrabalho, relatório sai em segundos, usuário não precisa usar planilha..."></textarea>
+          </label>
+        </fieldset>
+
+        <fieldset class="step" data-step="9">
+          <legend>9. Fechamento</legend>
+          <label>Observações livres da entrevista
+            <textarea name="freeNotes" placeholder="Falas importantes, exemplos dados pela pessoa ou observações do entrevistador."></textarea>
+          </label>
+          <label>Resumo do entrevistador — principais dores identificadas
+            <textarea name="interviewerSummaryPain"></textarea>
+          </label>
+          <label>Resumo do entrevistador — melhorias sugeridas
+            <textarea name="interviewerSummaryImprovements"></textarea>
+          </label>
+          <label>Possível prioridade para análise
+            <textarea name="interviewerPriority"></textarea>
+          </label>
+          <label class="consent"><input type="checkbox" name="consent" required /> Confirmo que as respostas podem ser armazenadas para análise interna das melhorias do sistema. <span aria-hidden="true">*</span></label>
+        </fieldset>
+
+        <div class="form-nav">
+          <button class="secondary" type="button" id="prevBtn">Voltar</button>
+          <button class="primary" type="button" id="nextBtn">Continuar</button>
+          <button class="primary submit" type="submit" id="submitBtn">Salvar entrevista</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <dialog id="successDialog" aria-labelledby="successTitle">
+    <div class="dialog-card">
+      <button class="dialog-close" type="button" aria-label="Fechar mensagem">×</button>
+      <p class="eyebrow">Entrevista salva</p>
+      <h2 id="successTitle">Resposta organizada com sucesso.</h2>
+      <p id="successMessage"></p>
+      <div id="qualityBox" class="quality-box"></div>
+      <div class="dialog-actions">
+        <a class="pill-button link" href="admin.html">Ver dashboard</a>
+        <button class="primary" type="button" id="newInterviewBtn">Nova entrevista</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="static-store.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

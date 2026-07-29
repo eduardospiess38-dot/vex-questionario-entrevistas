@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -2 400 104" role="img" aria-label="VEX">
+  <title>VEX</title>
+  <g transform="skewX(-8) translate(14 0)">
+    <polygon fill="#fff" points="0,0 35,0 63,62 91,0 126,0 77,96 49,96"/>
+    <path fill="#ef3d55" d="M142 0h94v26h-64v9h52v26h-52v9h64v26h-94z"/>
+    <polygon fill="#fff" points="256,0 291,0 316,33 341,0 376,0 334,48 376,96 341,96 316,63 291,96 256,96 298,48"/>
+  </g>
+</svg>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VEX — Respostas das Entrevistas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para respostas</a>
+  <div class="ambient" aria-hidden="true"><div class="grid-light"></div></div>
+  <header class="topbar">
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/vex-logo.svg" alt="VEX" /><span><small>Respostas coletadas</small></span></a>
+    <nav class="top-actions"><a class="pill-button link" href="index.html">Nova entrevista</a><button class="pill-button" type="button" id="exportCsvBtn">Exportar CSV</button></nav>
+  </header>
+  <main id="conteudo" class="site-shell admin-shell">
+    <section class="hero compact reveal-up">
+      <div><p class="eyebrow">Dashboard anônimo</p><h1>Visão geral das entrevistas</h1><p class="hero-text">Indicadores agregados para analisar dores, prioridades e qualidade das respostas sem expor participantes.</p></div>
+    </section>
+    <section class="glass-form admin-panel" aria-labelledby="adminTitle">
+      <h2 id="adminTitle">Resumo executivo</h2>
+      <div id="adminStatus" aria-live="polite">Carregando respostas...</div>
+      <div class="dashboard-grid" id="metricCards" aria-label="Métricas agregadas"></div>
+      <div class="dashboard-columns">
+        <article class="dash-card"><h3>Dores mais citadas</h3><div id="tagChart" class="bar-list"></div></article>
+        <article class="dash-card"><h3>Setores participantes</h3><div id="departmentChart" class="bar-list"></div></article>
+        <article class="dash-card"><h3>Sistemas avaliados</h3><div id="systemChart" class="bar-list"></div></article>
+        <article class="dash-card"><h3>Qualidade das respostas</h3><div id="qualityChart" class="bar-list"></div></article>
+      </div>
+    </section>
+  </main>
+  <script src="static-store.js" defer></script>
+  <script src="admin.js" defer></script>
+</body>
+</html>
